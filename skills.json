@@ -1,0 +1,89 @@
+{
+  "skills": [
+    {
+      "id": "navigate",
+      "name": "导航",
+      "keywords": ["导航", "去", "到", "路线", "怎么走", "地图", "location", "direction", "route"],
+      "apps": [
+        { "name": "高德地图", "priority": 100, "type": "delegation", "deeplink": "androidamap://route/plan/?sname=我的位置&dname={destination}&t=0" },
+        { "name": "百度地图", "priority": 80, "type": "delegation", "deeplink": "baidumap://map/direction?destination={destination}" },
+        { "name": "腾讯地图", "priority": 60, "type": "delegation", "deeplink": "qqmap://routeplan?type=drive&to={destination}" }
+      ]
+    },
+    {
+      "id": "order_food",
+      "name": "点外卖",
+      "keywords": ["外卖", "点餐", "吃", "汉堡", "披萨", "奶茶", "food", "delivery", "order"],
+      "apps": [
+        { "name": "小美 AI", "priority": 100, "type": "delegation", "deeplink": "xiaomei://order" },
+        { "name": "饿了么", "priority": 80, "type": "delegation", "deeplink": "eleme://search?keyword={keyword}" },
+        { "name": "美团", "priority": 60, "type": "gui_automation", "steps": ["open_app", "search", "select", "order"] }
+      ]
+    },
+    {
+      "id": "ride_hailing",
+      "name": "打车",
+      "keywords": ["打车", "出租车", "快车", "专车", "taxi", "ride", "uber", "滴滴"],
+      "apps": [
+        { "name": "滴滴", "priority": 100, "type": "delegation", "deeplink": "didi://home" },
+        { "name": "高德打车", "priority": 80, "type": "delegation", "deeplink": "androidamap://taxi" }
+      ]
+    },
+    {
+      "id": "send_message",
+      "name": "发消息",
+      "keywords": ["发消息", "微信", "短信", "message", "wechat", "send"],
+      "apps": [
+        { "name": "微信", "priority": 100, "type": "gui_automation", "steps": ["open_app", "search_contact", "input_text", "send"] }
+      ]
+    },
+    {
+      "id": "search",
+      "name": "搜索",
+      "keywords": ["搜索", "查", "找", "search", "find", "lookup"],
+      "apps": [
+        { "name": "浏览器", "priority": 100, "type": "delegation", "deeplink": "https://www.google.com/search?q={keyword}" }
+      ]
+    },
+    {
+      "id": "play_music",
+      "name": "听音乐",
+      "keywords": ["音乐", "听歌", "播放", "music", "song", "play"],
+      "apps": [
+        { "name": "网易云音乐", "priority": 100, "type": "delegation", "deeplink": "orpheus://search?keyword={keyword}" }
+      ]
+    },
+    {
+      "id": "take_photo",
+      "name": "拍照",
+      "keywords": ["拍照", "照相", "自拍", "photo", "camera", "picture"],
+      "apps": [
+        { "name": "相机", "priority": 100, "type": "delegation", "deeplink": "android.media.action.IMAGE_CAPTURE" }
+      ]
+    },
+    {
+      "id": "check_weather",
+      "name": "查天气",
+      "keywords": ["天气", "温度", "下雨", "weather", "temperature", "rain"],
+      "apps": [
+        { "name": "天气", "priority": 100, "type": "delegation", "deeplink": "am start -a android.intent.action.VIEW -d 'weather://'" }
+      ]
+    },
+    {
+      "id": "set_alarm",
+      "name": "设闹钟",
+      "keywords": ["闹钟", "提醒", "alarm", "reminder", "wake"],
+      "apps": [
+        { "name": "时钟", "priority": 100, "type": "delegation", "deeplink": "am start -a android.intent.action.SET_ALARM" }
+      ]
+    },
+    {
+      "id": "add_calendar_event",
+      "name": "添加日程",
+      "keywords": ["日程", "会议", "安排", "calendar", "event", "schedule", "meeting"],
+      "apps": [
+        { "name": "日历", "priority": 100, "type": "delegation", "deeplink": "am start -a android.intent.action.INSERT -t vnd.android.cursor.item/event" }
+      ]
+    }
+  ]
+}
